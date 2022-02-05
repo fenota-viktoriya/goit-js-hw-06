@@ -1,12 +1,13 @@
 const inputRef = document.querySelector('#name-input');
-const inputSpanRef = document.querySelector('#name-output');
-console.log(inputRef);
-console.log(inputSpanRef);
+const outputSpanRef = document.querySelector('#name-output');
+//console.log(inputRef);
+//console.log(outputSpanRef);
 
 
 inputRef.addEventListener('input', onInputChangeOutput );
 
 function onInputChangeOutput(event){
-    
-    return inputSpanRef.textContent = event.currentTarget.value;
-};
+    const outputValue = event.currentTarget.value;
+ return !outputValue ? outputSpanRef.textContent = 'Anonymous' : outputSpanRef.textContent = outputValue;
+ 
+}
