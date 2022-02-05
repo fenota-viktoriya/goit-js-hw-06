@@ -14,7 +14,6 @@ function onClickBoxCreate(){
   return createBoxes(amount);
 };
  
-
 function createBoxes(amount) {
   const basicSize = 30;
 
