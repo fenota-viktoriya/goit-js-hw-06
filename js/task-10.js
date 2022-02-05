@@ -20,7 +20,9 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     const size = basicSize + i * 10;
     const div = document.createElement('div');
-    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}`;
+    const hex = getRandomHexColor();
+    div.style.backgroundColor = hex;
+    div.style.cssText = `width: ${size}px; height: ${size}px; margin: 10px; background-color: ${hex}`;
     divBoxRef.append(div);
   }
   return divBoxRef;
